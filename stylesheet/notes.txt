@@ -1,0 +1,9 @@
+<div class="color-price">
+                                        <h2>Vivid Color</h2>
+                                        <h2>+INR. 15,000</h2>
+                                    </div>
+
+                                    hl4
+                                    slidepage4
+                                    p4-heading
+                                    p4

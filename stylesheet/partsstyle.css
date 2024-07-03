@@ -1,0 +1,249 @@
+.parts-heading h1{
+
+    font-size: 4vw;
+    color: var(--white-color-);
+    text-align: center;
+    font-family: var(--font-family-);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+
+.parts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parts #parts-shop {
+    width: 100%;
+    background-color: #101010;
+    padding: 0 9vw;
+}
+
+
+.parts .elem {
+    height: 85px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #38383864;
+    background-color: #101010;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    color: white;
+    cursor: pointer;
+}
+
+.parts .elem h2 {
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+    font-family: var(--font-family-);
+    font-weight: 500;
+}
+
+.parts .elem .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #fa6600;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+}
+
+.parts .elem:hover .overlay {
+    top: 0;
+}
+
+#fixed-image {
+    height: 233px;
+    width: 310px;
+    border-radius: 15px;
+    position: fixed;
+    z-index: 99;
+    left: 63%;
+    top: 35%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .parts #parts-shop {
+        display: flex;
+        flex-direction: column;
+        padding: 2vw;
+    }
+
+    .parts .elem {
+        height: auto;
+        padding: 1vw;
+        display: block;
+        text-align: center;
+    }
+
+    .parts .elem img {
+        display: block;
+        width: 80%;
+        height: auto;
+        margin: 10px auto;
+        border-radius: 15px;
+    }
+
+    .parts .elem .overlay,
+    .parts .elem:hover .overlay {
+        display: none;
+    }
+
+    .parts .elem h2 {
+        font-size: 5vw;
+        margin-bottom: 10px;
+    }
+
+    #fixed-image {
+        display: none;
+    }
+}
+
+@media (min-width: 630px) and (max-width: 900px) {
+    .parts #parts-shop #elem-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        padding: 2vw;
+        flex-wrap: wrap;
+    }
+    .parts .elem {
+        height: auto;
+        padding: 1vw;
+        display: flex;
+        background-color: #1a1a1a;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 1rem;
+        transition: all 0.2s ease-in-out;
+    }
+    .parts .elem:hover{
+        background-color: #fa6600;
+    }
+
+    .parts .elem img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .parts .elem .overlay,
+    .parts .elem:hover .overlay {
+        display: none;
+    }
+
+    .parts .elem h2 {
+        font-size: 4vw;
+        margin: 0;
+    }
+
+    #fixed-image {
+        display: none;
+    }
+}
+
+@media (min-width: 901px) {
+    .parts .elem img {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* test ride  */
+
+.test-ride-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+    filter: blur(5px) brightness(0.7);
+    width: 100vw;
+    height: 100vh;
+}
+
+.ride-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+    z-index: 0;
+}
+
+.content {
+    position: absolute;
+    z-index: 1;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.content h1{
+    font-size: 33px;
+    font-weight: 900;
+    font-family: var(--font-family-);
+}
+
+.content p{
+    font-size: 18px;
+    font-weight: 200;
+    font-family: var(--font-family-);
+}
+
+.animated-text {
+    opacity: 1;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--white-color-);
+}
+
+.cta-button {
+    font-family: var(--font-family-);
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #fa6600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #fa5c00;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgb(255, 98, 0, 0.6);
+}

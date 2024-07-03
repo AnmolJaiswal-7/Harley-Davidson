@@ -1,0 +1,262 @@
+.footer{
+    font-family: var(--font-family-);
+    background-color: var(--black-color-);
+    color: var(--white-color-);
+}
+
+.grid {
+    display: grid;
+    gap: 10px;
+}
+
+.container {
+    padding: 0 3rem;
+    width: 100vw;
+    height: 100%;
+}
+
+.foot-panel {
+    display: flex;
+    padding: 45px 65px;
+    border-bottom: 2px solid #444;
+    gap: 3px;
+    font-size: 35px;
+}
+
+.foot-panel .char {
+    color: #fa6600;
+}
+
+.foot-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 65px;
+    border-bottom: 2px solid #444;
+}
+
+.foot-col1-row2 {
+    margin-top: 30px;
+}
+
+.foot-col2-row1 {
+    font-weight: 400;
+}
+
+.foot-div-pad {
+    margin-bottom: 25px;
+}
+
+.foot-col-pad {
+    margin-bottom: 10px;
+}
+
+.container a {
+    text-decoration: none;
+    color: white;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+.foot-panel2 {
+    padding: 30px 65px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 100;
+    border-bottom: 2px solid #444;
+}
+
+.foot-dropdown img {
+    border-radius: 50%;
+}
+
+.flag {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.foot-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #111;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1.5px solid #fa6600;
+    border-radius: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    bottom: 100%;
+}
+
+.dropdown-content a {
+    color: #ccc;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+    color: #ff5733;
+}
+
+.foot-dropdown:hover .dropbtn {
+    background-color: #222;
+}
+
+.foot-dropdown.show .dropdown-content {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.foot-panel3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 65px;
+}
+
+.foot-panel3 .foot-trade {
+    width: 400px;
+    font-size: 9px;
+    color: #626262;
+}
+
+.footer-social-icons {
+    font-size: 24px;
+    gap: 10px;
+}
+
+@media (max-width: 700px) {
+    /* edit */
+    .foot-panel{
+        display: flex;
+        justify-content: center;
+        font-size: 1.8rem; 
+    }
+
+    .foot-panel2{
+        display: block;
+        text-align: center;
+    }
+
+    .foot-panel2 a{
+        margin: 7px;
+    }
+
+    .foot-panel3{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropbtn{
+        width: 80vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .foot-content {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .foot-content .foot-col1,
+    .foot-content .foot-col2,
+    .foot-content .foot-col3 {
+        padding: 20px 20px;
+        border-bottom: 1px solid #444;
+    }
+
+    .foot-content h3 {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .foot-content h3::after {
+        content: '\002B'; /* Plus sign */
+        font-size: 20px;
+    }
+
+    .foot-content .show h3::after {
+        content: '\2212'; /* Minus sign */
+    }
+
+    .foot-content .show a {
+        display: block;
+    }
+
+    .foot-content a {
+        display: none;
+        padding: 5px 0;
+    }
+}
+
+/* BREAKPOINTS */
+/* FOR SMALL DEVICES */
+
+@media screen and (max-width: 340px){
+
+}
+
+/* FOR MEDIUM DEVICES */
+
+@media screen and (min-width: px){
+
+}
+
+/* FOR LARGE DEVICES */
+
+@media screen and (min-width: 700px){
+.foot-panel2{
+display: block;
+text-align: center;
+}
+
+.foot-panel2 a{
+margin: 3px;
+}
+
+.foot-panel3{
+display: flex;
+justify-content: space-between;
+gap: 40px;
+}
+}
